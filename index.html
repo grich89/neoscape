@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Neoscape Demo</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div id="content">
+        <script id="main" type="text/x-handlebars-template">
+            <header>
+                <div class="logo">Neoscape</div>
+
+                <div class="nav-container">
+                    <div id="search-form">
+                        <button class="search-form--toggler" aria-expanded="false"><i class="fa fa-2x fa-search"></i></button>
+                        <form aria-hidden="true" id="search-form--form">
+                            <label for="search">Search</label>
+                            <input name="search" id="search" type="search">
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                    <nav class="main-nav">
+                        <button class="main-nav--toggler" aria-expanded="false">
+                            <span class="hamburger--line"></span>
+                            <span class="hamburger--line"></span>
+                            <span class="hamburger--line"></span>
+                        </button>
+                        <ul class="main-nav--items" aria-hidden="true">
+                            {{#navItems}}
+                                <li class="main-nav--item"><a href="{{link}}">{{label}}</a></li>
+                            {{/navItems}}
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <main>
+                <div class="intro">
+                    <h1>Neoscape</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum!</p>
+                </div>
+                <ul class="properties">
+                    {{#properties}}
+                        <li class="properties--property">
+                            <img src={{image.src}} alt={{image.alt}} />
+                            <h3>{{address}}</h3>
+                            <nav class="properties--property-nav">
+                                <a href={{website}}>Website</a>
+                                <a href={{landing}}>Landing</a>
+                            </nav>
+                        </li>
+                    {{/properties}}
+                </ul>
+            </main>
+            <footer>
+                <p>&copy; 2019 Neoscape, Inc. All Rights Reserved</p>
+                <nav class="footer-nav">
+                    <ul class="footer-nav--items">
+                        {{#footerNavItems}}
+                            <li class="footer-nav--item"><a href="{{link}}">{{label}}</a></li>
+                        {{/footerNavItems}}
+                    </ul>
+                </nav>
+                <a aria-label="Back to top" class="back-to-top" href="#"><i class="fa fa-arrow-up"></i></a>
+            </footer>
+        </script>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script type="module" src="js/main.js" async></script>
+</body>
+
+</html>

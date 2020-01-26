@@ -1,0 +1,62 @@
+.properties {
+    margin: 0 auto;
+    max-width: $L;
+
+    @media (min-width: $M) {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: auto auto;
+    }
+
+    @media (min-width: $L) {
+        grid-template-columns: auto auto auto;
+    }
+
+    &--property {
+        margin: 0 auto 1rem;
+        max-width: 350px;
+        position: relative;
+
+        @media (min-width: $M) {
+            margin: 0 auto;
+        }
+
+        h3 {
+            bottom: 1rem;
+            left: 1rem;
+            margin: 0;
+            position: absolute;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &--property-nav {
+        display: flex;
+        opacity: 0;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        transition: .4s opacity;
+
+        .properties--property:hover &,
+        .properties--property:focus & {
+            opacity: 1;
+        }
+
+        a {
+            border: 1px solid $cap-black;
+            border-radius: 50px;
+            color: $cap-black;
+            display: block;
+            margin-right: 0.5rem;
+            padding: 0.5rem;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

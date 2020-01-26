@@ -1,0 +1,131 @@
+header {
+    background-color: $white;
+    display: flex;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    .logo {
+        align-items: center;
+        display: flex;
+        font-size: 24px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    #search-form {
+        margin-right: 1rem;
+
+        &--form {
+            background-color: #f9f9f9;
+            display: none;
+            padding: 1rem;
+
+            &.open {
+                align-items: center;
+                display: flex;
+                left: 0;
+                position: absolute;
+                top: 100%;
+                width: 100%;
+                z-index: 1;
+            }
+
+            label {
+                display: block;
+                font-weight: 400;
+                margin-bottom: .5rem;
+                text-align: center;
+                padding: 0 1rem 0 0;
+            }
+
+            input {
+                background-color: #eee;
+                border: 0px;
+                padding: 1rem;
+                width: 100%;
+            }
+
+            button {
+                background-color: $cap-black;
+                color: $white;
+                flex: 1 0 auto;
+                padding: 1rem;
+            }
+        }
+    }
+
+    .nav-container {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .main-nav {
+        align-items: center;
+        display: flex;
+
+        &--toggler {
+            position: relative;
+            height: 25px;
+            width: 35px;
+
+            &.active {
+                span {
+                    display: none;
+
+                    &:first-child,
+                    &:last-child {
+                        display: block;
+                    }
+
+                    &:first-child {
+                        transform:rotate(45deg);
+                        top: 50%;
+                    }
+
+                    &:last-child {
+                        transform: rotate(135deg);
+                        top: 50%;
+                    }
+                }
+            }
+
+            span {
+                background-color: $cap-black;
+                display: block;
+                height: 1px;
+                position: absolute;
+                top: 12px;
+                transition: .4s all;
+                width: 35px;
+
+                &:first-child {
+                    top: 0;
+                }
+
+                &:last-child {
+                    top: 24px;
+                }
+            }
+        }
+
+        &--items {
+            display: none;
+
+            &.open {
+                background-color: #f9f9f9;
+                display: block;
+                left: 0;
+                position: absolute;
+                top: 100%;
+                width: 100%;
+            }
+
+            li {
+                padding: 1rem;
+                border-bottom: 1px solid #eee;
+            }
+        }
+    }
+}

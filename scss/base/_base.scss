@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+/**
+ * Set up a decent box model on the root element
+ */
+
+html {
+  box-sizing: border-box;
+  font-family: $base-font-family;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+}
+
+main {
+  background-color: #eee;
+  padding: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+}
+
+/**
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+/**
+ * Basic styles for links
+ */
+
+a {
+  color: $link-color;
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+p {
+  margin-bottom: 1em;
+  margin-top: 0px;
+}

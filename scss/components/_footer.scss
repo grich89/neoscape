@@ -1,0 +1,46 @@
+footer {
+    background-color: $base-font-color;
+    color: $white;
+    padding: 2rem;
+    position: relative;
+    text-align: center;
+
+    a {
+        color: $white;
+    }
+
+    .footer-nav {
+        &--items {
+            display: flex;
+            justify-content: center;
+        }
+
+        &--item {
+            display: flex;
+            font-size: 12px;
+            text-transform: uppercase;
+
+            &:after {
+                background-color: #666;
+                content: '';
+                display: block;
+                margin: 0 0.5rem;
+                width: 1px;
+            }
+
+            &:last-child {
+                &:after {
+                    content: none;
+                }
+            }
+        }
+    }
+
+    .back-to-top {
+        bottom: 0;
+        padding: 2rem;
+        position: absolute;
+        right: 0;
+        text-align: right;
+    }
+}
