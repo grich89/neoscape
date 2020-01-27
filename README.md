@@ -9,9 +9,9 @@ The structure of the project is based on rdwatters' gulp starter kit: https://gi
 
 Wherever possible, I used css for animation and display of hidden content (see the /scss folder). For the main navigation and search menu, I added a small amount of vanilla js to trigger the aria expanded and hidden states along with active classes (refer to js/nav.js for code).
 
-The page content is served through handlebars.js. I created an object of the navigation links and properties and then use handlebars' forEach syntax to loop through each one (refer to js/template.js for the object and index.html for the handlebars template).
+The page content is served through handlebars.js. I created an object of the navigation links and properties and then used handlebars' forEach syntax to loop through each one (refer to js/template.js for the object and index.html for the handlebars template).
 
-Project runs on localhost. To run it locally, download this repo and run the default "gulp" command.
+To run the project locally, download this repo and run the "gulp" command.
 
 ## iii. future improvement
 - seo optimization
