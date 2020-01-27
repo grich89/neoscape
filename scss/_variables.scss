@@ -36,9 +36,7 @@ $tablet: new-breakpoint(min-width 561px);
 $desktop: new-breakpoint(min-width $L 4);
 $extralarge: new-breakpoint(min-width $XL 4);
 
-$use-font-face-module: true;//required for first $font declaration
-$use-font-two: true;
-$use-font-three: false;
+//FONTS
 $font: 'raleway';
 $font-two: 'roboto';
 
