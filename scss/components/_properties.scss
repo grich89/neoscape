@@ -53,9 +53,17 @@
             display: block;
             margin-right: 0.5rem;
             padding: 0.5rem;
+            transition: .4s all;
+            will-change: color, background-color;
 
             &:last-child {
                 margin-right: 0;
+            }
+
+            &:hover,
+            &:focus {
+                background-color: $cap-black;
+                color: $white;
             }
         }
     }
